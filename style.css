@@ -4,6 +4,29 @@
   padding: 0;
 }
 
+.navbar {
+  max-width: 800px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  font-size: 0.95rem;
+  color: #222;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links a.active {
+  font-weight: 600;
+}
+
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f9f9f9;
