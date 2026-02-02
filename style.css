@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #ddd;
+  color: #fffae7;
 }
 
 .navbar {
@@ -14,7 +14,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: #fffae7;
   margin-left: 20px;
   font-size: 0.95rem;
   text-decoration: none;
@@ -52,7 +52,7 @@ h1 {
 }
 
 h2 {
-  color: #ffffff;
+  color: #fffae7;
   margin-top: 40px;
   margin-bottom: 10px;
   font-size: 1.4rem;
@@ -63,6 +63,19 @@ h2 {
 
 p {
   margin-bottom: 10px;
+}
+
+#tagline {
+  font-size: 1rem;
+  color: #696562;
+  transition: all 0.6s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#tagline.animated {
+  font-size: 1.1rem;
+  color: #ffc38b;
 }
 
 ul {
@@ -103,5 +116,26 @@ svg {
 }
 
 #barChart {
-  background-color: #A2D2FF;
+  background-color: #a2d2ff;
+}
+
+/* Nav bar highlight */
+
+/* Home image hop animation */
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.jump-once {
+  animation: jump 0.5s ease-out forwards;
 }

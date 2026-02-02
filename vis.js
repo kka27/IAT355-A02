@@ -166,19 +166,27 @@ data.forEach((d, i) => {
   svg.appendChild(bottomLabel);
 });
 
-const art = document.getElementById("svgArt");
-
-for (let i = 0; i < 25; i++) {
-  const circle = document.createElementNS(
-    "http://www.w3.org/2000/svg",
-    "circle",
-  );
-
-  circle.setAttribute("cx", Math.random() * 600);
-  circle.setAttribute("cy", Math.random() * 200);
-  circle.setAttribute("r", Math.random() * 30 + 5);
-  circle.setAttribute("fill", `hsl(${Math.random() * 360}, 70%, 60%)`);
-  circle.setAttribute("opacity", 0.7);
-
-  art.appendChild(circle);
-}
+// Fractal art
+document.addEventListener("DOMContentLoaded", () => {
+  const svg = document.getElementById("fractalArt");
+  function drawBranch(x1, y1, length, angle, depth) {
+    // stop if at root
+    if (depth === 0) return;
+    // draw branch
+    const x2 = x1 + length * Math.cos(angle);
+    const y2 = y1 - length * Math.sin(angle);
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", x1);
+    line.setAttribute("y1", y1);
+    line.setAttribute("x2", x2);
+    line.setAttribute("y2", y2);
+    // Asked Copilot how to change colour of branches vs depth
+    line.setAttribute("stroke", `hsl(${depth * 20}, 70%, 60%)`);
+    line.setAttribute("stroke-width", depth);
+    line.setAttribute("stroke-linecap", "round");
+    svg.appendChild(line);
+    drawBranch(x2, y2, length * 0.7, angle + 0.5, depth - 1);
+    drawBranch(x2, y2, length * 0.7, angle - 0.5, depth - 1);
+  }
+  drawBranch(300, 480, 140, Math.PI / 2, 10);
+});
