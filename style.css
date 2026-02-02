@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #ddd;
 }
 
 .navbar {
@@ -13,9 +14,9 @@
 }
 
 .nav-links a {
+  color: white;
   margin-left: 20px;
   font-size: 0.95rem;
-  color: #222;
   text-decoration: none;
 }
 
@@ -29,7 +30,7 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background-color: #f9f9f9;
+  background-color: #242d3b;
   color: #222;
   line-height: 1.6;
 }
@@ -45,11 +46,13 @@ header {
 }
 
 h1 {
+  color: #ff7b00;
   font-size: 2.2rem;
   font-weight: 600;
 }
 
 h2 {
+  color: #ffffff;
   margin-top: 40px;
   margin-bottom: 10px;
   font-size: 1.4rem;
@@ -63,8 +66,7 @@ p {
 }
 
 ul {
-  list-style: none;
-  padding-left: 0;
+  padding-left: 30px;
 }
 
 li {
@@ -80,7 +82,7 @@ li {
 }
 
 a {
-  color: #0066cc;
+  color: #0080ff;
   text-decoration: none;
 }
 
@@ -92,5 +94,14 @@ footer {
   margin-top: 60px;
   font-size: 0.9rem;
   color: #555;
-  text-align: center;   
+  text-align: center;
+}
+
+svg {
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+#barChart {
+  background-color: #A2D2FF;
 }
