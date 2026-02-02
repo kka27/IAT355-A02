@@ -166,7 +166,7 @@ data.forEach((d, i) => {
   svg.appendChild(bottomLabel);
 });
 
-// Fractal art
+// Fractal art with help from: https://thecodingtrain.com/challenges/14-fractal-trees-recursive
 document.addEventListener("DOMContentLoaded", () => {
   const svg = document.getElementById("fractalArt");
   function drawBranch(x1, y1, length, angle, depth) {
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
     line.setAttribute("y1", y1);
     line.setAttribute("x2", x2);
     line.setAttribute("y2", y2);
-    // Asked Copilot how to change colour of branches vs depth
+    // asked Copilot how to change colour of branches vs depth
     line.setAttribute("stroke", `hsl(${depth * 20}, 70%, 60%)`);
     line.setAttribute("stroke-width", depth);
     line.setAttribute("stroke-linecap", "round");
