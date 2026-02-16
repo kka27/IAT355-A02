@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Video Game Visualizations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="visualization.html">Visualization</a>
+      <a href="videoGameVis.html" class="active">Video Game Visualizations</a>
+    </div>
+  </nav>
+  <div class="container">
+    <header>
+      <h1>Exploring Video Game Trends</h1>
+    </header>
+
+    <section class="video-game">
+      <h2>Global Sales by Genre and Platform</h2>
+      <h3>Question 1: Which genres generate the highest global sales overall?</h3>
+      <h3>Question 2: Are there specific platforms that drive global sales compared to others?</h3>
+      <div id="q1-vis1"></div>
+    </section>
+    <section class="video-game">
+      <h2>Sales Over Time by Platform and Genre</h2>
+      <h3>Question 1: Which genres were most popular in different time periods?</h3>
+      <div id="q2-vis1"></div>
+      <h3>Question 2: How have total sales changed over time for each platform?</h3>
+      <div id="q2-vis2"></div>
+    </section>
+    <section class="video-game">
+      <h2>Regional Sales Versus Platform</h2>
+      <h3>Question 1: Which platform has the highest sales in each region?</h3>
+      <div id="q3-vis1"></div>
+      <h3>Question 2: Are certain platforms marketed to specific regions for their success?</h3>
+      <div id="q3-vis2"></div>
+    </section>
+    <section class="video-game">
+      <h2>Console Popularity During the Fifth Console War (2000-2025)</h2>
+      <h3>Question 1: How did Nintendo, Sony, and Microsoft’s global sales change throughout this period?</h3>
+      <div id="q4-vis1"></div>
+      <h3>Question 2: Which genres generated the most sales for Nintendo, Sony, and Microsoft during this period?</h3>
+      <div id="q4-vis2"></div>
+    </section>
+    <footer>
+      <p>© Kelvin Kwan - IAT 335, Simon Fraser Univerity (2026)</p>
+    </footer>
+  </div>
+  <script src="videoGameVis.js"></script>
+</body>
+
+</html>
